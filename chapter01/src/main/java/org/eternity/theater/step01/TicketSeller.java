@@ -12,11 +12,10 @@ public class TicketSeller {
     }
 
     public void checkTicket(Audience audience) {
+        Ticket ticket = ticketOffice.getTicket();
         if (audience.getBag().hasInvitation()) {
-            Ticket ticket = getTicketOffice().getTicket();
             audience.getBag().setTicket(ticket);
         } else {
-            Ticket ticket = getTicketOffice().getTicket();
             audience.getBag().minusAmount(ticket.getFee());
             getTicketOffice().plusAmount(ticket.getFee());
             audience.getBag().setTicket(ticket);
