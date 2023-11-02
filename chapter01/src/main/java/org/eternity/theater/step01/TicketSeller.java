@@ -7,10 +7,6 @@ public class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    public TicketOffice getTicketOffice() {
-        return ticketOffice;
-    }
-
     public void checkTicket(Audience audience) {
         Ticket ticket = ticketOffice.getTicket();
         ticketOffice.plusAmount(audience.requestExchangeTicket(ticket));
