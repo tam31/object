@@ -7,7 +7,7 @@ public class Audience {
         this.bag = bag;
     }
 
-    public Bag getBag() {
-        return bag;
+    public Long requestExchangeTicket(Ticket ticket) {
+        return bag.putExchangeItem();
     }
 }
